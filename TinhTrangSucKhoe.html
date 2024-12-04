@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tình trạng sức khỏe</title>
+    <link rel="stylesheet" href="styles.css">
+     <div class="header">
+        <img src="healthcare_logo.png" alt="Logo" class="logo">
+        <h1 class="title">HealthCare VietNam</h1>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="TinhTrangSucKhoe.html">Trang chủ</a></li>
+                <li><a href="gioithieu.html">Giới thiệu</a></li>
+                <li><a href="lienhe.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </div>
+</head>
+
+<body>
+
+    <!-- Row 1: Thông tin cá nhân và nút bấm -->
+    <div class="row">
+        
+        <div class="info-table">
+            <h3>Thông Tin Cá Nhân</h3>
+            <table>
+                <tr>
+                    <th>Họ Tên</th>
+                    <td id="name">Đang cập nhật...</td>
+                </tr>
+                <tr>
+                    <th>Tuổi</th>
+                    <td id="age">Đang cập nhật...</td>
+                </tr>
+                <tr>
+                    <th>Giới Tính</th>
+                    <td>
+                        <select id="gender-select">
+                            <option value="1">Nam</option>
+                            <option value="0">Nữ</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Nút bấm -->
+        <div class="button">
+            <h2>Giám sát</h2>
+            <img id="bulb" src="monitoring-on.png" alt="Light">
+            <button id="btn1" type="button" onclick="led(true)">ON</button>
+            <button id="btn2" type="button" onclick="led(false)">OFF</button>
+        </div>z
+
+        <div class="button">
+            <h2>Nguồn</h2>
+            <img id="temperature" src="power-off.png" alt="Temperature">
+            <button id="btn3" type="button" onclick="temperature(true)">ON</button>
+            <button id="btn4" type="button" onclick="temperature(false)">OFF</button>
+        </div>
+
+        <div class="button">
+            <h2>Cảnh báo</h2>
+            <img id="alert" src="siren-off.png" alt="Alert">
+            <button id="btn5" type="button" onclick="alert(true)">ON</button>
+            <button id="btn6" type="button" onclick="alert(false)">OFF</button>
+        </div>
+    </div>
+
+    <!-- Row 2: Các cảm biến -->
+    <div class="row">
+        <div class="blood-sugar">
+            <img src="doduong.png" alt="Đường huyết" class="icon">
+            <h3>Đường huyết</h3>
+            <p id="blood-sugar-value">Đang cập nhật...</p>
+            <div class="alert">
+                <img id="blood-sugar-alert-icon" src="default.png" alt="Alert Icon">
+                <p id="blood-sugar-alert-text">Giá trị không hợp lệ</p>
+            </div>
+        </div>
+
+        <div class="heart-rate">
+            <img src="donhiptim.jpg" alt="Nhịp tim" class="icon">
+            <h3>Nhịp tim</h3>
+            <p id="heart-rate-value">Đang cập nhật...</p>
+            <div class="alert">
+                <img id="heart-rate-alert-icon" src="default.png" alt="Alert Icon">
+                <p id="heart-rate-alert-text">Giá trị không hợp lệ</p>
+            </div>
+        </div>
+
+        <div class="temperature">
+            <img src="nhietke.jpg" alt="Nhiệt độ" class="icon">
+            <h3>Nhiệt độ</h3>
+            <p id="body-temp-value">Đang cập nhật...</p>
+            <div class="alert">
+                <img id="body-temp-alert-icon" src="default.png" alt="Alert Icon">
+                <p id="body-temp-alert-text">Giá trị không hợp lệ</p>
+            </div>
+        </div>
+
+        <div class="spo2">
+            <img src="doSPO2.png" alt="SpO2" class="icon">
+            <h3>SpO2</h3>
+            <p id="spo2-value">Đang cập nhật...</p>
+            <div class="alert">
+                <img id="spo2-alert-icon" src="default.png" alt="Alert Icon">
+                <p id="spo2-alert-text">Giá trị không hợp lệ</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Row 3: Dashboard với 3 biểu đồ -->
+    <div class="row">
+        <div class="blood-sugar-chart">
+            <div class="chart-title">Đường huyết</div>
+            <canvas id="bloodSugarChart"></canvas>
+        </div>
+        <div class="heart-rate-chart">
+            <div class="chart-title">Nhịp tim</div>
+            <canvas id="heartRateChart"></canvas>
+        </div>
+        <div class="row">
+            <div class="chart-cell">
+                <div class="chart-title">SpO2</div>
+                <div id="spO2-value" class="value">Đang tải...</div> <!-- Giá trị SpO2 -->
+                <canvas id="spO2Chart" ></canvas>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="TinhTrang.js"></script>
+</body>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Hoàng Ngọc Chiến 22139006</p>
+            <p>Hồ Đăng Khoa 22139034</p>
+            <p>KhoaChien@gmail.com</p>
+        </div>
+    </footer>
+
+</html>
