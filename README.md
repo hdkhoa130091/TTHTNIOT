@@ -5,8 +5,11 @@ A real-time health monitoring solution designed to acquire vital signs using emb
 ---
 ## Demo
 ![532185982078437920-ezgif com-video-to-gif-converter (2)](https://github.com/user-attachments/assets/bd21e8f4-5042-4314-a74b-d0ffd9057e4f)
-![ScreencastFrom2026-03-2014-17-39-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/6b4ad152-0c0e-4762-8270-32d037e86576)
-![ScreencastFrom2026-03-2014-14-39-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/e41b91e0-2577-4701-a85b-43b45c117e98)
+
+![ScreencastFrom2026-03-2014-17-39-ezgif com-resize (1)](https://github.com/user-attachments/assets/153982e3-e8a9-47aa-831f-aa4e3a3053fa)
+
+![ScreencastFrom2026-03-2014-14-39-ezgif com-resize](https://github.com/user-attachments/assets/d6e57a8d-b12b-4cde-9427-af3f3e77e324)
+
 
 ---
 
